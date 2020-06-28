@@ -10,11 +10,11 @@ export default createGlobalStyle`
    }
 
    body {
-       background: #EDEDED;
+       background: #f0f0f0;
        -webkit-font-smoothing: antialiased;
    }
 
-   body, button, input,  {
+   body, button, input {
     @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
    }
 
@@ -26,4 +26,5 @@ export default createGlobalStyle`
    label, span {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
    }
+
 `;

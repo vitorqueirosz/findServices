@@ -3,7 +3,6 @@ import { useHistory } from 'react-router-dom';
 
 import logo from '../../uploads/logoService.svg';
 import Dropzone from '../../Components/Dropzone';
-import { Link } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 import { Map, TileLayer, Marker} from 'react-leaflet';
 import { LeafletMouseEvent } from 'leaflet';
@@ -66,12 +65,14 @@ const CreateService = () => {
         whatsapp: ''
     });
 
+
     useEffect(() => {
         navigator.geolocation.getCurrentPosition(position => {
             const { latitude, longitude  } = position.coords;
 
             setInitialPosition([latitude, longitude]);
-
+            console.log(localStorage.token)
+            
         });
     }, []);
 
@@ -151,6 +152,12 @@ const CreateService = () => {
         setFormData({ ...formData, [name]: value });
     };
 
+    function handleGoBack() {
+        localStorage.removeItem('token');
+
+        history.push('/')
+    }
+
    async function handleSubmit(event: FormEvent) {
         event.preventDefault();
 
@@ -182,22 +189,30 @@ const CreateService = () => {
         if(selectedFile) {
             data.append('image', selectedFile)
         };
-
-
         
-        await api.post('/typeService', data);
 
+        await api.post('/typeService', data).then(response => {
 
-       
+            const id = response.data.user_id;
+            console.log(response.data)
+            console.log(response.data.user_id)
+
+            history.push(`/users/${id}`)
+        });
+
     };
 
    async function handlePush() {
 
      toast.success("Cadastro realizado com sucesso!", {autoClose: 1400});
 
-     setTimeout(() => {
-            history.push('/')
-        }, (1400));
+    //  api.get(`/typeServices`).then(response => {
+    //     setUser([response.data.user])
+
+    //     setServices(response.data.services)
+
+    // })}
+
     };
 
     return (
@@ -209,9 +224,9 @@ const CreateService = () => {
                 </div>
                     
                 <div>
-                    <Link to="/">
-                            <FiArrowLeft size={20}/>Voltar para home
-                     </Link>
+                    <button onClick={handleGoBack}>
+                            <FiArrowLeft size={20}/>Voltar
+                     </button>
                 </div>
             </Header>
 
