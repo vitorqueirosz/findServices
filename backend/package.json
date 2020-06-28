@@ -7,8 +7,11 @@
     "dev": "ts-node-dev  --transpileOnly  --ignore-watch node_modules src/server.ts",
     "knex:migrate": "knex --knexfile knexfile.ts migrate:latest",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "knex:users": "knex --knexfile knexfile.ts migrate:up _create_users.ts",
     "knex:down": "knex --knexfile knexfile.ts migrate:down _create_users.ts",
+=======
+>>>>>>> 19bfc48d40c61414300bdedd1c3789b94c08fd2d
 =======
 >>>>>>> 19bfc48d40c61414300bdedd1c3789b94c08fd2d
     "knex:seed": "knex --knexfile knexfile.ts seed:run"
@@ -21,11 +24,17 @@
     "@types/hapi__joi": "^17.1.2",
     "@types/multer": "^1.4.3",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "bcryptjs": "^2.4.3",
     "celebrate": "^12.1.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
+=======
+    "celebrate": "^12.1.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+>>>>>>> 19bfc48d40c61414300bdedd1c3789b94c08fd2d
 =======
     "celebrate": "^12.1.1",
     "cors": "^2.8.5",
@@ -37,9 +46,13 @@
   },
   "devDependencies": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "@types/bcryptjs": "^2.4.2",
     "@types/express": "^4.17.6",
     "@types/jsonwebtoken": "^8.5.0",
+=======
+    "@types/express": "^4.17.6",
+>>>>>>> 19bfc48d40c61414300bdedd1c3789b94c08fd2d
 =======
     "@types/express": "^4.17.6",
 >>>>>>> 19bfc48d40c61414300bdedd1c3789b94c08fd2d

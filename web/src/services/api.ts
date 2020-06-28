@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import axios, { AxiosRequestConfig } from 'axios';
 
 interface Token {
@@ -33,13 +32,4 @@ api.interceptors.request.use((config: AxiosRequestConfig) => {
 
 
 
-=======
-import axios from 'axios';
-
-
-const api = axios.create({
-    baseURL: 'http://localhost:3333'
-});
-
->>>>>>> 19bfc48d40c61414300bdedd1c3789b94c08fd2d
 export default api;

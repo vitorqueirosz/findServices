@@ -1,9 +1,6 @@
 import {Request, Response} from 'express';
 import knex from '../database/connection';
-<<<<<<< HEAD
 import { string, number } from '@hapi/joi';
-=======
->>>>>>> 19bfc48d40c61414300bdedd1c3789b94c08fd2d
 
 
 class TypesController {
@@ -42,7 +39,6 @@ class TypesController {
         const { id } = req.params;
 
         const TypeService = await knex('typeServices').where('id', id).first();
-<<<<<<< HEAD
         if(!TypeService) {
             return res.json({ error: 'That Service type no exists'});
         };
@@ -53,20 +49,11 @@ class TypesController {
 
         const serializedTypeServices = {
                 user_id: user_id[0].users_id,
-=======
-
-        if(!TypeService) {
-            return res.json({ error: 'That Service type no exists'});
-        };
-
-        const serializedTypeServices = {
->>>>>>> 19bfc48d40c61414300bdedd1c3789b94c08fd2d
                 ...TypeService,
                 image_url: `http://192.168.0.100:3333/uploads/${TypeService.image}`
             
         };
 
-<<<<<<< HEAD
 
 
 
@@ -77,12 +64,6 @@ class TypesController {
         .where('types_services.type_service_id', id).select('services.id', 'services.title', 'services.image');
 
         return res.json({ ...serializedTypeServices, services});
-=======
-        const services = await knex('services').join('types_services', 'services.id', '=', 'types_services.services_id')
-        .where('types_services.type_service_id', id).select('services.id', 'services.title', 'services.image');
-
-        return res.json({ type: serializedTypeServices, services});
->>>>>>> 19bfc48d40c61414300bdedd1c3789b94c08fd2d
     };
 
     async create(req: Request, res: Response) {
@@ -118,7 +99,6 @@ class TypesController {
         
         const insertedIds = await trx('typeServices').insert(typeService);
 
-<<<<<<< HEAD
         const users_id = await trx('users').select('id').where('email', email)
         .where('id', req.userId).first();
    
@@ -145,28 +125,10 @@ class TypesController {
         
         return res.json({
             user_id: req.userId,
-=======
-        const type_service_id = insertedIds[0];
-
-        const type_services = services
-        .split(',')
-        .map((item: string )=> Number(item.trim()))
-        .map((services_id: number) => ({
-            services_id,
-            type_service_id,
-        }))
-        
-        await trx('types_services').insert(type_services);
-        
-        await trx.commit();
-        
-        return res.json({
->>>>>>> 19bfc48d40c61414300bdedd1c3789b94c08fd2d
             id: type_service_id,
             ...typeService
         });
     };
-<<<<<<< HEAD
 
     async update(req: Request, res: Response) {
         const { id } = req.params;
@@ -248,9 +210,3 @@ class TypesController {
 
 
 export default TypesController;
-=======
-}
-
-
-export default TypesController;
->>>>>>> 19bfc48d40c61414300bdedd1c3789b94c08fd2d

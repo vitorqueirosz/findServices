@@ -3,10 +3,6 @@ import { useHistory } from 'react-router-dom';
 
 import logo from '../../uploads/logoService.svg';
 import Dropzone from '../../Components/Dropzone';
-<<<<<<< HEAD
-=======
-import { Link } from 'react-router-dom';
->>>>>>> 19bfc48d40c61414300bdedd1c3789b94c08fd2d
 import { FiArrowLeft } from 'react-icons/fi';
 import { Map, TileLayer, Marker} from 'react-leaflet';
 import { LeafletMouseEvent } from 'leaflet';
@@ -28,11 +24,8 @@ import {
 import api from '../../services/api';
 import axios from 'axios';
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 19bfc48d40c61414300bdedd1c3789b94c08fd2d
 interface Service {
     id: number;
     title: string;
@@ -74,21 +67,14 @@ const CreateService = () => {
         whatsapp: ''
     });
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 19bfc48d40c61414300bdedd1c3789b94c08fd2d
     useEffect(() => {
         navigator.geolocation.getCurrentPosition(position => {
             const { latitude, longitude  } = position.coords;
 
             setInitialPosition([latitude, longitude]);
-<<<<<<< HEAD
             console.log(localStorage.token)
             
-=======
-
->>>>>>> 19bfc48d40c61414300bdedd1c3789b94c08fd2d
         });
     }, []);
 
@@ -168,15 +154,12 @@ const CreateService = () => {
         setFormData({ ...formData, [name]: value });
     };
 
-<<<<<<< HEAD
     function handleGoBack() {
         localStorage.removeItem('token');
 
         history.push('/')
     }
 
-=======
->>>>>>> 19bfc48d40c61414300bdedd1c3789b94c08fd2d
    async function handleSubmit(event: FormEvent) {
         event.preventDefault();
 
@@ -208,7 +191,6 @@ const CreateService = () => {
         if(selectedFile) {
             data.append('image', selectedFile)
         };
-<<<<<<< HEAD
         
 
         await api.post('/typeService', data).then(response => {
@@ -220,22 +202,12 @@ const CreateService = () => {
             history.push(`/users/${id}`)
         });
 
-=======
-
-
-        
-        await api.post('/typeService', data);
-
-
-       
->>>>>>> 19bfc48d40c61414300bdedd1c3789b94c08fd2d
     };
 
    async function handlePush() {
 
      toast.success("Cadastro realizado com sucesso!", {autoClose: 1400});
 
-<<<<<<< HEAD
     //  api.get(`/typeServices`).then(response => {
     //     setUser([response.data.user])
 
@@ -243,11 +215,6 @@ const CreateService = () => {
 
     // })}
 
-=======
-     setTimeout(() => {
-            history.push('/')
-        }, (1400));
->>>>>>> 19bfc48d40c61414300bdedd1c3789b94c08fd2d
     };
 
     return (
@@ -259,15 +226,9 @@ const CreateService = () => {
                 </div>
                     
                 <div>
-<<<<<<< HEAD
                     <button onClick={handleGoBack}>
                             <FiArrowLeft size={20}/>Voltar
                      </button>
-=======
-                    <Link to="/">
-                            <FiArrowLeft size={20}/>Voltar para home
-                     </Link>
->>>>>>> 19bfc48d40c61414300bdedd1c3789b94c08fd2d
                 </div>
             </Header>
 

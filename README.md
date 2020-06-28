@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # findServices
 FindServices is a platform to help people find a service they are looking for, around them
 =======
+=======
+>>>>>>> 19bfc48d40c61414300bdedd1c3789b94c08fd2d
 
  <h2 align="center">:gear: FindServices</h2>
  
@@ -42,4 +45,7 @@ FindServices is a platform to help people find a service they are looking for, a
 
 
 With ♥ by [Vitor Queiroz](https://www.linkedin.com/in/vitor-queiroz-4b32131a3/)!
+<<<<<<< HEAD
+>>>>>>> 19bfc48d40c61414300bdedd1c3789b94c08fd2d
+=======
 >>>>>>> 19bfc48d40c61414300bdedd1c3789b94c08fd2d

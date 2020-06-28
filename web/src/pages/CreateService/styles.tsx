@@ -31,22 +31,15 @@ export const Header = styled.div`
     }
 
 
-<<<<<<< HEAD
     button {
-=======
-    a {
->>>>>>> 19bfc48d40c61414300bdedd1c3789b94c08fd2d
         text-decoration: none;
         font-size: 15px;
         color: #183172;
         font-weight: bold;
         display: flex;
         align-items: center;
-<<<<<<< HEAD
         border: 0;
         cursor: pointer;
-=======
->>>>>>> 19bfc48d40c61414300bdedd1c3789b94c08fd2d
     }
 
     svg {

@@ -6,12 +6,8 @@ export const Container = styled.div`
   padding: 0 30px;
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD
   /* height: 100vh; */
   
-=======
-  height: 100vh;
->>>>>>> 19bfc48d40c61414300bdedd1c3789b94c08fd2d
  background: #FFA24D;
 
 
@@ -51,11 +47,7 @@ export const CenterContent = styled.div`
 `;
 export const SideContent = styled.div`
     display: flex;
-<<<<<<< HEAD
     margin: 40px 100px 0px 0;
-=======
-    margin: 150px 100px 0px 0;
->>>>>>> 19bfc48d40c61414300bdedd1c3789b94c08fd2d
     justify-content: center;
     flex-direction: column;
     
@@ -74,17 +66,12 @@ export const SideContent = styled.div`
         
     }
 
-<<<<<<< HEAD
     button {
-=======
-    a {
->>>>>>> 19bfc48d40c61414300bdedd1c3789b94c08fd2d
         width: 100%;
         max-width: 360px;
         background: #183172;
         height: 72px;
         border-radius: 8px;
-<<<<<<< HEAD
         border: 0;
         text-decoration: none;
         cursor: pointer;
@@ -99,20 +86,6 @@ export const SideContent = styled.div`
 ;
     }
    
-=======
-        text-decoration: none;
-
-        display: flex;
-        align-items: center;
-        
-        margin-top: 40px;
-        overflow: hidden;
-
-    &:hover {
-        background: #F2F2F2;
-;
-    }
->>>>>>> 19bfc48d40c61414300bdedd1c3789b94c08fd2d
         span {
             background: rgba(0, 0, 0, 0.1);
             width: 72px;
@@ -132,7 +105,6 @@ export const SideContent = styled.div`
             text-align: center;
             flex: 1;
             color: #F2F2F2;
-<<<<<<< HEAD
             font-size: 16px;
         }
     }
@@ -163,15 +135,6 @@ export const SideContent = styled.div`
 `;
 export const SideImage = styled.div`
     padding-top: 40px;
-=======
-            
-        }
-    }
-
-`;
-export const SideImage = styled.div`
-    padding: 60px 0 0 0;
->>>>>>> 19bfc48d40c61414300bdedd1c3789b94c08fd2d
     /* position: relative; */
     /*img {
         width: 620px;
@@ -179,7 +142,6 @@ export const SideImage = styled.div`
     } */
 `;
 
-<<<<<<< HEAD
 export const Input = styled.div`
      input {
         width: 100%;
@@ -202,7 +164,5 @@ export const Input = styled.div`
     }
 
 `;
-=======
->>>>>>> 19bfc48d40c61414300bdedd1c3789b94c08fd2d
 
 export default styled;
