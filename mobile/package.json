@@ -16,7 +16,7 @@
     "@react-navigation/stack": "^5.5.1",
     "@types/react-native-maps": "^0.24.0",
     "@types/styled-components": "^5.1.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "expo": "~37.0.3",
     "expo-location": "~8.1.0",
     "expo-mail-composer": "^8.1.0",
